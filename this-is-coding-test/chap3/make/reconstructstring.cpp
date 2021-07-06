@@ -13,5 +13,6 @@ int main(){
         }
     }
     sort(k.begin(),k.end());
-    cout<<k<<result<<endl;
+    cout<<k;
+    if(result!=0) cout<<result<<endl;
 }
