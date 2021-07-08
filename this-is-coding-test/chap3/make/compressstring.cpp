@@ -3,7 +3,7 @@ using namespace std;
 int main(){
     string s;
     cin>>s;
-    int length=1001;
+    int length=s.length();
     for(int i=1;i<=s.length()/2;i++){
         string past = s.substr(0,i);
         cout<<"out side for loop past string "<<past<<endl;
@@ -32,6 +32,6 @@ int main(){
         cout<<"result string "<<result<<endl;
         length=min(length,(int)result.length());
     }
-    length=min(length,(int)s.length());
+    // length=min(length,(int)s.length());
     cout<<length<<endl;
 }
