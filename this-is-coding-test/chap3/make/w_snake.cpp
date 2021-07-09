@@ -1,3 +1,6 @@
+//처음 생각대로 할껄 괜한 꼼수를 부림
+//항상 강조하지만 배열이 가장 쉬운 구조이다. 유념할것
+//전체적인 아이디어는 맞았음, 그러나 구현에서 아쉬움
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -29,6 +32,7 @@ int main(){
     int startX=1;
     int time=0;
     int status = 0;
+    q.push({startY,startX});
     while(1){
         
         if(startY>n||startX>n||startX<1||startY<1){
@@ -47,12 +51,15 @@ int main(){
             startY--;
         }
         q.push({startY,startX});
+        printf("%d %d\n",startY,startX);
         if(q.size()>3){
 
         
         for(int i=0;i<q.size();i++){
             pair<int,int> past = q.front();
+            printf("past y : %d past x : %d starty : %d startx : %d\n",past.first,past.second,startY,startX);
             if((past.first==startY)&&(past.second==startX)){
+                printf("past y : %d past x : %d starty : %d startx : %d\n",past.first,past.second,startY,startX);
                 printf("return in cycle\n");
                 printf("%d",time);
                 return 0;
@@ -85,6 +92,7 @@ int main(){
             turna.pop();
         }
         if(arr[startY][startX]==1){
+            arr[startY][startX]=0;
             continue;
         }
         q.pop();
