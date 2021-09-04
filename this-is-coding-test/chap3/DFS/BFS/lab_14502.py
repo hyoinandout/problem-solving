@@ -1,5 +1,5 @@
 from collections import deque
-
+import copy
 def bfs(i,j,d,n,m):
     dx = [0,0,-1,1]
     dy = [-1,1,0,0]
@@ -18,7 +18,7 @@ def bfs(i,j,d,n,m):
 
 def virus(i,j,k,b,n,m):
     c = []
-    c = b.copy()
+    c = copy.deepcopy(b)
     c[i//m][i%m] = 1
     c[j//m][j%m] = 1
     c[k//m][k%m] = 1
@@ -37,7 +37,7 @@ n,m = map(int,input().split())
 a = [[0] * m for _ in range(n)]
 for i in range(n):
     a[i] = list(map(int,input().split()))
-print(a)
+#print(a)
 result = 0
 size = n*m
 for i in range(size):
@@ -50,5 +50,5 @@ for i in range(size):
             if a[k//m][k%m] == 1 or a[k//m][k%m] == 2:
                 continue
             result = max((result, virus(i,j,k,a,n,m)))
-print(a)
+#print(a)
 print(result)
