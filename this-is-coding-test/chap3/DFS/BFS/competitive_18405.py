@@ -18,6 +18,8 @@ def bfs(a,n,k):
     dx = [0,0,-1,1]
     dy = [-1,1,0,0]
     while q:
+        if cnt == k:
+            return
         size = len(q)
         for _ in range(size):
             value, y, x = q.popleft()
@@ -30,8 +32,6 @@ def bfs(a,n,k):
                     a[ny][nx] = value
                     q.append((value,ny,nx))
         cnt+=1
-        if cnt == k:
-            return
 bfs(a,n,s)
-print(a)
+#print(a)
 print(a[x-1][y-1])
