@@ -32,7 +32,7 @@ def solve(nums, target):
     return (findTarget(mergeSort(nums),target) + 1)
     
 
-print(solve([13,59,30,40,10],59))
-print(solve([1,3,5,6],0))
-print(solve([1,3,5,6,2],4))
-print(solve([5,4,-2,-6,9],10))
+# print(solve([13,59,30,40,10],59))
+# print(solve([1,3,5,6],0))
+# print(solve([1,3,5,6,2],4))
+# print(solve([5,4,-2,-6,9],10))
