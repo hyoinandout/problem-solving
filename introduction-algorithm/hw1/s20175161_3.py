@@ -13,7 +13,7 @@ def maxScore(nums):
     return dp[0][len(nums)-2]
     
 
-# print(maxScore([1,3]))
-# print(maxScore([5,6,7]))
-# print(maxScore([3,1,5,8]))
-# print(maxScore([1,3,5,6,2]))
+print(maxScore([1,3]))
+print(maxScore([5,6,7]))
+print(maxScore([3,1,5,8]))
+print(maxScore([1,3,5,6,2]))
