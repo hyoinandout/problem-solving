@@ -1,5 +1,6 @@
 # 범위 탐색 문제들 좀 풀어보자
 # 완전 탐색인 것은 예상했는데 디테일에서 부족했음
+# 조건은 깔끔하게
 # 틀림
 def solution(lines):
     timeline = []
@@ -25,7 +26,7 @@ def solution(lines):
         cnt = 0
         for j in range(len(timeline)):
             #print(timeline[j])
-            if timeline[i][1] + 1 <= timeline[j][0] or timeline[j][1] < timeline[i][1]:
+            if timeline[i][1] + 1 <= timeline[j][0] or timeline[i][1] > timeline[j][1]:
                 continue
             cnt += 1
         if candid < cnt:
