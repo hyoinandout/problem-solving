@@ -28,6 +28,6 @@ result = array_multiply(b)
 
 for i in range(n):
     for j in range(n):
-        print(result[i][j], end= ' ')
+        print(result[i][j] % 1000, end= ' ')
     print()
 
